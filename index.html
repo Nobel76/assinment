@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoMetry</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+ 
+<nav class=" flex justify-between bg-sky-200 mt-12 mx-auto p-8">
+    <span>
+        <h1 class="text-5xl hover:underline font-semibold font-sans"><span class="text-fuchsia-400">In</span>teractive</h1>
+        <p class="text-2xl mt-2 hover:underline font-sans">Geometry</p>
+    </span>
+
+    <button id="btn-blog" class="bg-blue-700 w-28 hover:bg-fuchsia-600 rounded-xl text-white font-semibold">blog</button>
+
+</nav>
+<!-- section -->
+<section class=" mt-32 mx-auto p-4 flex gap-4">
+<div class="sm-grid grid grid-cols-3 gap-4 grid-rows-2" >
+
+    <!-- 1 -->
+    <div id="all-colors" class="border rounded-lg p-8 hover:bg-rose-300">
+    <img class=" w-60 object-center mx-auto h-52" src="images/triangle.png" alt="">
+  
+
+<div class="text-center">
+    <h1 class="text-4xl mt-4 ">Triangle</h1>
+<p>Area(A) = 0.5 * b * h</p>
+<div class="flex">
+    
+        <input id="input-fieldOne" class=" border  mb-2 mt-2" type="text" placeholder="b"> cm
+    <input id="input-fieldTwo" class="border  mb-2 mt-2"  type="text" placeholder="h">
+
+    <!-- check icon -->
+     <span>
+        <button id="check-btn" class="bg-blue-600 mt-2 w-8 h-6 rounded "><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+          </svg>
+          </button>
+     </span>
+</div>
+<button id="btn-calculate"  class="text-white text-semibold w-60 bg-blue-700 hover:bg-green-800 rounded-lg mt-4 p-4">Calculate</button>
+    </div>
+</div>
+
+<!-- 2 -->
+    <div class=" border hover:bg-emerald-600 rounded-lg p-8">
+    <img class="w-60 object-center mx-auto h-52" src="images/rectangle.png" alt="">
+  
+<div class="text-center">
+    <h1 class="text-4xl mt-4 ">Rectangle</h1>
+<p>Area(A) = w * l</p>
+<input id="input-rec" class=" border mb-2 mt-2" type="text" placeholder="w"> cm
+<input id="input-rec-one" class="border" type="text" placeholder="l">cm
+<button id="rectangle-btn" class="text-white text-semibold w-60 bg-blue-700 rounded-lg mt-4 p-4">Calculate</button>
+    </div>
+</div>
+
+<!-- 3 -->
+    <div class="border hover:bg-violet-400 rounded-lg p-8">
+    <img class="w-60 object-center mx-auto h-52" src="images/parallelogram.png" alt="">
+  
+<div class="text-center">
+    <h1 class="text-4xl mt-4 ">Parallelogram</h1>
+<p>Area(A) = b * h</p>
+<p>b=10cm, h=12cm</p>
+<button class="text-white text-semibold w-60 bg-blue-700 rounded-lg mt-4 p-4">Calculate</button>
+    </div>
+</div>
+<!-- 4 -->
+    <div class="border hover:bg-lime-300 rounded-lg p-8">
+    <img class="w-60 object-center mx-auto h-52" src="images/rhombus.png" alt="">
+  
+<div class="text-center">
+    <h1 class="text-4xl mt-4 ">Rhombus</h1>
+<p>Area(A) = 0.5 * d1 * d2</p>
+<p>d1= 16cm d2=8cm</p>
+
+
+<button class="text-white text-semibold w-60 bg-blue-700 hover:bg-amber-800 rounded-lg mt-4 p-4">Calculate</button>
+    </div>
+</div>
+<!-- 5 -->
+    <div class="border hover:bg-fuchsia-600 rounded-lg p-8">
+    <img class="w-60 object-center mx-auto h-52" src="images/pentagon.png" alt="">
+  
+<div class="text-center">
+    <h1 class="text-4xl mt-4 ">Pentagon</h1>
+<p>Area(A) = 0.5 * p * b</p>
+<p>p = 6cm, b = 10cm</p>
+<button class="text-white text-semibold w-60 bg-blue-700 rounded-lg mt-4 p-4">Calculate</button>
+    </div>
+</div>
+<!-- 6 -->
+    <div class="border hover:bg-orange-300 rounded-lg p-8">
+    <img class="w-60 object-center mx-auto h-52" src="images/ellipse.png" alt="">
+  
+<div class="text-center">
+    <h1 class="text-4xl mt-4 ">Ellipse</h1>
+<p>Area(A) = ab</p>
+<p>a = 10cm, b = 4cm</p>
+
+<button class="text-white text-semibold w-60 bg-blue-700 rounded-lg mt-4 p-4">Calculate</button>
+    </div>
+</div>
+</div>
+
+<!-- area input -->
+<div class="border rounded-lg w-[437px] h-96">
+<h4 class="text-2xl mt-2 font-semibold underline text-center">Area Calculation</h4>
+<div class="flex gap-2">
+    <p class="mt-12 p-2">1.Triangle <span id="total-area">12</span> m2</p>
+    <span class="mt-6  w-[110px] h-[32px] mr-2 ">
+        <button class="bg-blue-700 text-white hover:bg-violet-700 p-2 rounded-lg ">Convert to m2</button>
+       
+    </span>
+    <!-- icon delete -->
+    <button id="btn-dele" class="bg-blue-700 text-white hover:bg-violet-700 p-2 mt-6 h-18 rounded-lg "><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0" />
+      </svg>
+      </button>
+</div>
+<div class="flex gap-2">
+    <p class="mt-12 p-2">2.Rectangle <span id="total-area-two">0</span> m2</p>
+    <span class="mt-6  w-[110px] h-[32px] mr-2 ">
+        <button class="bg-blue-700 text-white hover:bg-violet-700 p-2 rounded-lg ">Convert to m2</button>
+       
+    </span>
+    <!-- icon delete -->
+    <button id="btn-dele" class="bg-blue-700 text-white hover:bg-violet-700 p-2 mt-6 h-18 rounded-lg "><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0" />
+      </svg>
+      </button>
+</div>
+<div class="flex mt-4 gap-2">
+    <p class="mt-6">3.Ellipse 125.60m2</p>
+    <span class="mt-2  w-[110px] h-[32px] mr-2 ">
+        <button class="bg-blue-700 text-white hover:bg-violet-700 p-2 rounded-lg ">Convert to m2</button>
+    </span>
+    <button class="bg-blue-600 rounded-lg text-white p-2 mt-4 "><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0" />
+      </svg>
+      </button>
+</div>
+</div>
+</section>
+<!-- js script -->
+<script src="js/traingle.js"></script>
+<script src="js/rectangle.js"></script>
+<script src="js/randomcolors.js"></script>
+</body>
+</html>
